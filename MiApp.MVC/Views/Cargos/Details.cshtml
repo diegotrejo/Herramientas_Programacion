@@ -1,0 +1,29 @@
+﻿@using MiApp.UTN.Modelos
+
+@model Cargo
+
+@{
+    ViewData["Title"] = "Detalle Cargo";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Detalle Cargo</h2>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Nombre</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Descripción</th>
+        <td>@Model.Description</td>
+    </tr>
+</table>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>

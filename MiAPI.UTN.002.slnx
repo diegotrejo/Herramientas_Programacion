@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Api.Consummer/Api.Consummer.csproj" Id="c17a5e2c-4949-457b-9b5b-6ce9934668c1" />
+  <Project Path="MiAPI.UTN.002/MiAPI.UTN.002.csproj" />
+  <Project Path="MiApp.MVC/MiApp.MVC.csproj" Id="f17e20c4-7a07-467b-83b2-6f244e84633d" />
+  <Project Path="MiApp.Test/MiApp.Test.csproj" Id="f870fd35-7b0c-4fd6-8455-c2a27799ea35" />
+  <Project Path="MiApp.UTN.Modelos/MiApp.UTN.Modelos.csproj" Id="7c81c089-ef0b-4812-8a57-cfa4d9d0c138" />
+</Solution>

@@ -1,0 +1,36 @@
+﻿@using MiApp.UTN.Modelos
+
+@model Cargo
+
+@{
+    ViewData["Title"] = "Eliminar Cargo";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Eliminar Cargo</h2>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>
+
+<p>¿ Está seguro que desea eliminar el siguiente registro ?</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Nombre</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Descripción</th>
+        <td>@Model.Description</td>
+    </tr>
+</table>
+
+<form asp-action="Delete">
+    <input asp-for="Id" type="hidden" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+</form>
+
+<span> @ViewData["error"] </span>
