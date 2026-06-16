@@ -48,6 +48,11 @@ namespace MiApp.MVC.Controllers
         public ActionResult Edit(int id)
         {
             var datos = Crud<Cargo>.ReadById(id.ToString());
+            ViewBag.ListaEmpleados = Crud<Empleado>
+                .ReadAll()
+                .Where( e => e.CargoId == id)
+                .ToList();
+
             return View(datos);
         }
 

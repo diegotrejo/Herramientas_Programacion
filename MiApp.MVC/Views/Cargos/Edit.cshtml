@@ -31,6 +31,31 @@
     <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
 
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Empleado</td>
+            <td>Salario</td>
+            <td>Comision</td>
+            <td>Fecha Ingreso</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Empleado empleado in ViewBag.ListaEmpleados)
+        {
+            <tr>
+                <td>@empleado.Id</td>
+                <td>@empleado.Persona.Apellido @empleado.Persona.Nombre</td>
+                <td>@empleado.Salario</td>
+                <td>@empleado.Comisiono</td>
+                <td>@empleado.FechaIngreso</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

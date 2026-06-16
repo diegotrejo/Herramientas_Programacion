@@ -58,7 +58,10 @@ namespace MiAPI.UTN._002.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleado()
         {
-            return await _context.Empleados.ToListAsync();
+            return await _context.Empleados
+                .Include( e => e.Persona)
+                .Include( c => c.Cargo)
+                .ToListAsync();
         }
 
         // GET: api/Empleados/5
